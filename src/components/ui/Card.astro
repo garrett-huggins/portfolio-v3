@@ -1,0 +1,41 @@
+---
+import { cn } from "@/utils/cn";
+import { ArrowUpRight } from "lucide-astro";
+interface Props {
+  href?: string;
+  grid?: string;
+  id?: string;
+  title?: string;
+}
+const { href, grid, id, title } = Astro.props;
+---
+
+{
+  href ? (
+    <a
+      href={href}
+      target="_blank"
+      class={cn("group block h-full w-full", grid)}
+    >
+      <div
+        id={id}
+        class="relative h-full w-full rounded-xl border-2 border-accent bg-secondary p-4 transition-colors group-hover:bg-primary dark:border-d-accent dark:bg-d-secondary group-hover:dark:bg-d-primary"
+      >
+        <ArrowUpRight class="absolute right-5 top-5 transition-transform duration-300 ease-in-out group-hover:-translate-y-2 group-hover:translate-x-2" />
+        {title && <h2 class="mb-1 text-xl group-hover:underline">{title}</h2>}
+        <slot />
+      </div>
+    </a>
+  ) : (
+    <div
+      id={id}
+      class={cn(
+        "h-full w-full rounded-xl border-2 border-accent bg-secondary p-4 dark:border-d-accent dark:bg-d-secondary",
+        grid,
+      )}
+    >
+      {title && <h2 class="mb-1 text-xl">{title}</h2>}
+      <slot />
+    </div>
+  )
+}

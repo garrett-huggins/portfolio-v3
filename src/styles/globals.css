@@ -1,0 +1,8 @@
+html {
+  font-family: Poppins, sans-serif;
+  background: #ffffff;
+  position: relative;
+}
+html.dark {
+  background: #13151a;
+}

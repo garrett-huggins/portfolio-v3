@@ -1,5 +1,5 @@
 {
-  "name": "slanted-dev",
+  "name": "slanted.dev",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -11,7 +11,26 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.3.1",
+    "@astrojs/react": "^3.0.4",
+    "@astrojs/tailwind": "^5.0.2",
+    "@fontsource/poppins": "^5.0.8",
+    "@types/react": "^18.2.34",
+    "@types/react-dom": "^18.2.14",
     "astro": "^3.4.3",
+    "astro-icon": "^0.8.1",
+    "clsx": "^2.0.0",
+    "framer-motion": "^10.16.4",
+    "lucide-astro": "^0.292.0",
+    "lucide-react": "^0.292.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwind-merge": "^2.0.0",
+    "tailwindcss": "^3.3.5",
     "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.3",
+    "prettier-plugin-astro": "^0.12.1",
+    "prettier-plugin-tailwindcss": "^0.5.6"
   }
 }
