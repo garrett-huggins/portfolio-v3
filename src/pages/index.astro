@@ -73,11 +73,12 @@ import { Icon } from "astro-icon";
       </div>
     </Card>
     <!-- RESUME -->
-    <Card href="/resume" grid="col-span-2" title="Resume">
+    <Card id="resume" href="/resume" grid="col-span-2" title="Resume">
       <p>View my resume.</p>
     </Card>
     <!-- BLOG -->
     <Card
+      id="blog"
       href="http://blog.slanted.dev"
       grid="col-span-4 row-span-2"
       title="Blog"
@@ -85,7 +86,7 @@ import { Icon } from "astro-icon";
       <p>Read my thoughts on various topics.</p>
     </Card>
     <!-- PROJECTS -->
-    <Card grid="col-span-2 row-span-2 space-y-2" title="Projects">
+    <Card id="projects" grid="col-span-2 row-span-2 space-y-2" title="Projects">
       <div class="w-full">
         <p class="text-lg">tcli</p>
         <hr />
@@ -110,14 +111,19 @@ import { Icon } from "astro-icon";
       </div>
     </Card>
     <!-- COLLECTIONS -->
-    <Card href="/collections" grid="col-span-3" title="Collections">
+    <Card
+      id="collections"
+      href="/collections"
+      grid="col-span-3"
+      title="Collections"
+    >
       <p>
         A collection of code snippets, useful tools, and anything else tech
         related that I find interesting.
       </p>
     </Card>
     <!-- STACK -->
-    <Card grid="col-span-3" title="Stack">
+    <Card id="stack" grid="col-span-3" title="Stack">
       <p>View my current stack.</p>
       <div class="mt-4 flex flex-wrap items-center justify-center">
         <Icon name="vscode-icons:file-type-vscode" class="w-16 p-2" />

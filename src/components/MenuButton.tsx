@@ -34,16 +34,16 @@ const MenuButton = () => {
       href: "#contact",
     },
     {
+      name: "Resume",
+      href: "#resume",
+    },
+    {
       name: "Blog",
       href: "#blog",
     },
     {
       name: "Projects",
       href: "#projects",
-    },
-    {
-      name: "Resume",
-      href: "#resume",
     },
     {
       name: "Collections",
