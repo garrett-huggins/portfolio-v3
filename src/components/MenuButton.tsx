@@ -59,7 +59,7 @@ const MenuButton = () => {
     <div className="md:hidden">
       <button
         onClick={toggleModal}
-        className="dark:bg-d-primary hover:dark:bg-d-accent hover:bg-accent dark:border-d-accent border-accent ml-2 rounded-lg border-2 bg-primary p-2"
+        className="ml-2 rounded-lg border-2 border-accent bg-primary p-2 hover:bg-accent dark:border-d-accent dark:bg-d-primary hover:dark:bg-d-accent"
       >
         <Menu size={24} />
       </button>
@@ -71,11 +71,11 @@ const MenuButton = () => {
             exit="closed"
             variants={menuVariants}
             transition={{ duration: 0.25 }}
-            className="bg-background dark:bg-d-background absolute right-0 top-0 z-10 h-full w-full"
+            className="fixed right-0 top-0 z-10 h-full w-full bg-background dark:bg-d-background"
           >
             <button
               onClick={toggleModal}
-              className="dark:bg-d-primary hover:dark:bg-d-accent hover:bg-accent dark:border-d-accent border-accent absolute right-0 top-0 m-4 ml-2 rounded-lg border-2 bg-primary p-2"
+              className="absolute right-0 top-0 m-4 ml-2 rounded-lg border-2 border-accent bg-primary p-2 hover:bg-accent dark:border-d-accent dark:bg-d-primary hover:dark:bg-d-accent"
             >
               <X size={24} />
             </button>
@@ -85,7 +85,7 @@ const MenuButton = () => {
                   key={section.name}
                   onClick={toggleModal}
                   href={section.href}
-                  className="hover:bg-accent dark:hover:bg-d-accent border-accent dark:border-d-accent border-b-2 p-2 text-center"
+                  className="border-b-2 border-accent p-2 text-center hover:bg-accent dark:border-d-accent dark:hover:bg-d-accent"
                 >
                   {section.name}
                 </a>
