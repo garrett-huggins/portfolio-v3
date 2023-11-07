@@ -1,13 +1,13 @@
 ---
-import ToggleIcon from "./ToggleIcon.astro";
-import MenuButton from "./MenuButton";
+import DarkmodeToggle from "./darkmode.astro";
+import MobileMenu from "./mobile-menu";
 ---
 
 <header class="mx-auto flex max-w-screen-xl justify-between p-4">
   <h1 class="text-2xl font-bold">slanted.dev</h1>
   <div class="flex h-full items-center">
-    <ToggleIcon />
+    <DarkmodeToggle />
     <!-- button to open up # nav to the different sections -->
-    <MenuButton client:load />
+    <MobileMenu client:load />
   </div>
 </header>
