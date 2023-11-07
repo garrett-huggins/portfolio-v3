@@ -1,0 +1,15 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import CollectionSelector from "@/components/collections/selector.tsx";
+import { ArrowLeft } from "lucide-astro";
+---
+
+<Layout
+  title="collections | slanted.dev"
+  pageDesc="An assorted collection of useful goodies."
+>
+  <a href="/" class="flex hover:underline"><ArrowLeft /> Go back</a>
+  <h2 class="text-4xl">Collections</h2>
+  <p>An assorted collection of useful goodies.</p>
+  <CollectionSelector client:load />
+</Layout>
