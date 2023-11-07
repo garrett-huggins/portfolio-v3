@@ -6,15 +6,16 @@ interface Props {
   grid?: string;
   id?: string;
   title?: string;
+  target?: string;
 }
-const { href, grid, id, title } = Astro.props;
+const { href, grid, id, title, target } = Astro.props;
 ---
 
 {
   href ? (
     <a
       href={href}
-      target="_blank"
+      target={target ? target : "_blank"}
       class={cn("group block h-full w-full", grid)}
     >
       <div
