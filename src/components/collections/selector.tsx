@@ -1,14 +1,18 @@
 import { useState } from "react";
+import Resources from "./resources";
+import Snippets from "./snippets";
+import Libraries from "./libraries";
+import TechDeck from "./tech-deck";
 
 const CollectionSelector = () => {
   const [selected, setSelected] = useState<
-    "Snippets" | "Libraries" | "Resources"
+    "Snippets" | "Libraries" | "Resources" | "Tech Deck"
   >("Snippets");
 
   const Selection = ({
     title,
   }: {
-    title: "Snippets" | "Libraries" | "Resources";
+    title: "Snippets" | "Libraries" | "Resources" | "Tech Deck";
   }) => {
     return (
       <button
@@ -23,14 +27,21 @@ const CollectionSelector = () => {
   };
 
   return (
-    <div className="flex w-full justify-center">
-      <div className="flex space-x-6">
+    <div className="flex w-full flex-col items-center">
+      {/* make normal at md: then change to something smaller before */}
+      <div className="my-4 flex space-x-6">
         <Selection title="Snippets" />
         <div className="border border-text dark:border-d-text"></div>
         <Selection title="Libraries" />
         <div className="border border-text dark:border-d-text"></div>
         <Selection title="Resources" />
+        <div className="border border-text dark:border-d-text"></div>
+        <Selection title="Tech Deck" />
       </div>
+      {selected === "Snippets" && <Snippets />}
+      {selected === "Libraries" && <Libraries />}
+      {selected === "Resources" && <Resources />}
+      {selected === "Tech Deck" && <TechDeck />}
     </div>
   );
 };
