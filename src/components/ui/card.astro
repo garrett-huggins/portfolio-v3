@@ -20,7 +20,7 @@ const { href, grid, id, title, target } = Astro.props;
     >
       <div
         id={id}
-        class="relative h-full w-full rounded-xl border-2 border-accent bg-secondary p-4 transition-colors group-hover:bg-primary dark:border-d-accent dark:bg-d-secondary group-hover:dark:bg-d-primary"
+        class="relative h-full w-full rounded-xl border-2 border-accent bg-secondary p-4 hover:transition-colors hover:duration-300 hover:ease-in-out group-hover:bg-primary dark:border-d-accent dark:bg-d-secondary group-hover:dark:bg-d-primary"
       >
         <ArrowUpRight class="absolute right-5 top-5 transition-transform duration-300 ease-in-out group-hover:-translate-y-2 group-hover:translate-x-2" />
         {title && <h2 class="mb-1 text-xl group-hover:underline">{title}</h2>}
