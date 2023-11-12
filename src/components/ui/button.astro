@@ -3,14 +3,14 @@ import { cn } from "@/utils/cn";
 interface Props {
   href?: string;
   className?: string;
-  onClick?: () => void;
+  target?: string;
 }
-const { href, className } = Astro.props;
+const { href, className, target } = Astro.props;
 ---
 
 {
   href ? (
-    <a href={href} target="_blank">
+    <a href={href} target={target ? target : "_blank"}>
       <button
         class={cn(
           "rounded-lg border-2 border-accent bg-primary p-2  hover:bg-accent dark:border-d-accent dark:bg-d-primary hover:dark:bg-d-accent",
