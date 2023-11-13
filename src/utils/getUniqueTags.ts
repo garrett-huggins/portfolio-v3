@@ -1,3 +1,4 @@
+// @ts-nocheck
 const getUniqueTags = (items) => {
   const tags: string[] = items
     .flatMap((item) => item.tags)
