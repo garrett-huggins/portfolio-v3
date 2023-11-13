@@ -2,7 +2,7 @@
 import Layout from "@/layouts/layout.astro";
 import Card from "@/components/ui/card.astro";
 import Button from "@/components/ui/button.astro";
-import silhouette from "@/../public/silhouette_transparent.png";
+import avatar from "@/../public/avatar.png";
 import { Image } from "astro:assets";
 import { ArrowUpRight } from "lucide-astro";
 import { Github, Twitter, Mail, Linkedin } from "lucide-react";
@@ -38,10 +38,15 @@ import { Icon } from "astro-icon";
           </div>
         </Button>
         <Image
-          src={silhouette}
-          alt="silhouette of Garrett Huggins"
-          class="absolute -bottom-4 -right-6 z-0 h-[100px] w-[100px] opacity-30 md:h-[200px] md:w-[200px] md:opacity-100"
+          src={avatar}
+          alt="Avatar of Garrett Huggins"
+          class="mx-auto h-[200px] w-[200px] opacity-100 md:absolute md:-bottom-4 md:-right-6 md:block"
         />
+        <!-- <Image
+          src={avatar}
+          alt="Avatar of Garrett Huggins"
+          class="mx-auto max-w-[200px]"
+        /> -->
       </div>
     </Card>
     <!-- ABOUT ME -->
