@@ -13,14 +13,14 @@ const menuVariants = {
   },
 };
 
-const MenuButton = () => {
+const MenuButton = ({ path }: { path: string }) => {
   const [open, setOpen] = useState(false);
   const toggleModal = () => {
     console.log("clicked");
     setOpen(!open);
   };
 
-  const sections = [
+  const homeSections = [
     {
       name: "Home",
       href: "#home",
@@ -55,6 +55,57 @@ const MenuButton = () => {
     },
   ];
 
+  const collectionSections = [
+    {
+      name: "Libraries",
+      href: "/collections/libraries",
+    },
+    {
+      name: "Resources",
+      href: "/collections/resources",
+    },
+    {
+      name: "Tools",
+      href: "/collections/tools",
+    },
+  ];
+
+  const SectionDisplay = () => {
+    if (path === "/") {
+      return homeSections.map((section) => (
+        <a
+          key={section.name}
+          onClick={toggleModal}
+          href={section.href}
+          className="border-b-2 border-accent p-2 text-center hover:bg-accent dark:border-d-accent dark:hover:bg-d-accent"
+        >
+          {section.name}
+        </a>
+      ));
+    } else if (path.split("/")[1] === "collections") {
+      return collectionSections.map((section) => (
+        <a
+          key={section.name}
+          onClick={toggleModal}
+          href={section.href}
+          className="border-b-2 border-accent p-2 text-center hover:bg-accent dark:border-d-accent dark:hover:bg-d-accent"
+        >
+          {section.name}
+        </a>
+      ));
+    } else {
+      return (
+        <a
+          onClick={toggleModal}
+          href="/"
+          className="border-b-2 border-accent p-2 text-center hover:bg-accent dark:border-d-accent dark:hover:bg-d-accent"
+        >
+          Home
+        </a>
+      );
+    }
+  };
+
   return (
     <div className="md:hidden">
       <button
@@ -80,16 +131,7 @@ const MenuButton = () => {
               <X size={24} />
             </button>
             <ul className="mt-20 flex w-full flex-col justify-center">
-              {sections.map((section) => (
-                <a
-                  key={section.name}
-                  onClick={toggleModal}
-                  href={section.href}
-                  className="border-b-2 border-accent p-2 text-center hover:bg-accent dark:border-d-accent dark:hover:bg-d-accent"
-                >
-                  {section.name}
-                </a>
-              ))}
+              <SectionDisplay />
             </ul>
           </motion.div>
         )}

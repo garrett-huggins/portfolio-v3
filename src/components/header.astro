@@ -1,6 +1,8 @@
 ---
 import DarkmodeToggle from "./darkmode.astro";
 import MobileMenu from "./mobile-menu";
+
+const currentPath = Astro.url.pathname;
 ---
 
 <header class="mx-auto flex max-w-screen-xl items-center justify-between p-4">
@@ -8,6 +10,6 @@ import MobileMenu from "./mobile-menu";
   <div class="flex h-full items-center">
     <DarkmodeToggle />
     <!-- button to open up # nav to the different sections -->
-    <MobileMenu client:load />
+    <MobileMenu path={currentPath} client:load />
   </div>
 </header>
