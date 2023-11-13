@@ -1,0 +1,19 @@
+---
+import Layout from "@/layouts/layout.astro";
+import { Image } from "astro:assets";
+import missingImage from "@/../public/404.png";
+---
+
+<Layout title="404" pageDesc="Something is missing...">
+  <div class="flex h-full w-full flex-col items-center justify-center">
+    <div class="mt-10">
+      <h1 class="text-center text-5xl">404</h1>
+      <p class="text-center text-2xl">Page not found</p>
+      <p class="text-center">
+        I forgot something... Oh well, if it was important I would have
+        remembered it.
+      </p>
+      <Image src={missingImage} alt="silhouette of Garrett Huggins" />
+    </div>
+  </div>
+</Layout>
