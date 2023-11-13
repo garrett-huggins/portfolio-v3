@@ -2,7 +2,6 @@ export interface library {
   name: string;
   description: string;
   url: string;
-  img?: string;
   tags: string[];
 }
 

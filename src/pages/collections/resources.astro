@@ -1,5 +1,18 @@
 ---
-import Collections from "@/layouts/collections.astro";
+import CollectionsLayout from "@/layouts/collections.astro";
+import CollectionItem from "@/components/collectionItem.astro";
+import { resources } from "@/data/collections/resources";
 ---
 
-<Collections />
+<CollectionsLayout>
+  {
+    resources
+      .sort((a, b) => {
+        if (a.name.toLowerCase() < b.name.toLowerCase()) return -1;
+        if (a.name.toLowerCase() > b.name.toLowerCase()) return 1;
+
+        return 0;
+      })
+      .map((item) => <CollectionItem item={item} />)
+  }
+</CollectionsLayout>

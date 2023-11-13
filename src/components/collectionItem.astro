@@ -1,33 +1,42 @@
 ---
+import Card from "./ui/card.astro";
 interface Props {
   item: {
     name: string;
     url: string;
     description: string;
     img?: string;
+    tags?: string[];
   };
 }
 const { item } = Astro.props;
 ---
 
-<li class="flex space-x-4">
-  {
-    item.img && (
-      <img
-        src={item.img}
-        alt={`${item.name} icon`}
-        class="hidden max-w-sm rounded-lg border-2 border-accent p-2 dark:border-d-accent md:block"
-      />
-    )
-  }
-  <div>
-    <a href={item.url} target="_blank" rel="noopener noreferrer" class="">
-      <h4
-        class="text-2xl underline hover:text-primary dark:hover:text-d-primary"
-      >
+<li class="list-none">
+  <Card href={item.url}>
+    {
+      item.img && (
+        <img
+          src={item.img}
+          alt={`${item.name} icon`}
+          class="hidden max-w-sm rounded-lg border-2 border-accent p-2 dark:border-d-accent md:block"
+        />
+      )
+    }
+    <div>
+      <h4 class="text-2xl group-hover:underline">
         {item.name}
       </h4>
-    </a>
-    <p class="">{item.description}</p>
-  </div>
+      <p class="">{item.description}</p>
+    </div>
+    <div>
+      {
+        item.tags?.map((tag) => (
+          <span class="mb-2 mr-2 inline-block rounded-full bg-accent px-3 py-1 text-sm font-semibold text-white dark:bg-d-accent">
+            {tag}
+          </span>
+        ))
+      }
+    </div>
+  </Card>
 </li>
