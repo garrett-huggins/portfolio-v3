@@ -77,7 +77,7 @@ const MenuButton = ({ path }: { path: string }) => {
           key={section.name}
           onClick={toggleModal}
           href={section.href}
-          className="border-b-2 border-accent p-2 text-center hover:bg-accent dark:border-d-accent dark:hover:bg-d-accent"
+          className="border-b-2 border-accent p-2 text-center text-xl hover:bg-accent dark:border-d-accent dark:hover:bg-d-accent"
         >
           {section.name}
         </a>
@@ -88,7 +88,7 @@ const MenuButton = ({ path }: { path: string }) => {
           key={section.name}
           onClick={toggleModal}
           href={section.href}
-          className="border-b-2 border-accent p-2 text-center hover:bg-accent dark:border-d-accent dark:hover:bg-d-accent"
+          className="border-b-2 border-accent p-2 text-center text-xl hover:bg-accent dark:border-d-accent dark:hover:bg-d-accent"
         >
           {section.name}
         </a>
@@ -98,7 +98,7 @@ const MenuButton = ({ path }: { path: string }) => {
         <a
           onClick={toggleModal}
           href="/"
-          className="border-b-2 border-accent p-2 text-center hover:bg-accent dark:border-d-accent dark:hover:bg-d-accent"
+          className="border-b-2 border-accent p-2 text-center text-xl hover:bg-accent dark:border-d-accent dark:hover:bg-d-accent"
         >
           Home
         </a>
