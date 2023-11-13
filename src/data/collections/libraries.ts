@@ -16,9 +16,9 @@ export const libraries: library[] = [
   {
     name: "Headless UI",
     description:
-      "A set of completely unstyled, fully accessible UI components for React, Vue, and Alpine.js.",
+      "Completely unstyled, fully accessible UI components, designed to integrate beautifully with Tailwind CSS.",
     url: "https://headlessui.dev/",
-    tags: ["ui", "react", "vue", "alpine"],
+    tags: ["ui", "react", "vue"],
   },
   {
     name: "React Spring",
