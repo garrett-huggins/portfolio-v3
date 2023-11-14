@@ -13,7 +13,7 @@ export default {
         "d-accent": "#5ea3a6",
         text: "#0b1414",
         background: "#eff6f6",
-        primary: "#29dae7",
+        primary: "#3FC3CA",
         secondary: "#dbeaeb",
         accent: "#599ea1",
         highlight: "#0a838a",
