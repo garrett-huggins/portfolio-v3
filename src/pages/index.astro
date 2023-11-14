@@ -109,7 +109,16 @@ import { Icon } from "astro-icon";
       grid="col-span-4 row-span-2"
       title="Blog"
     >
-      <p>Read my thoughts on various topics.</p>
+      <p class="border-b border-text dark:border-d-text">
+        Read my thoughts on various topics.
+      </p>
+      <div class="mt-2 space-y-2">
+        <p>Recent Posts</p>
+        <Card>
+          <p class="text-lg font-bold">NextJS 13 Blog Starter</p>
+          <p>Let's create a dynamic blog using NextJS 13.</p>
+        </Card>
+      </div>
     </Card>
     <!-- PROJECTS -->
     <Card id="projects" grid="col-span-2 row-span-2 space-y-2" title="Projects">
@@ -155,7 +164,6 @@ import { Icon } from "astro-icon";
       <div class="flex flex-wrap items-center justify-center">
         <Icon name="vscode-icons:file-type-vscode" class="w-16 px-2" />
         <Icon name="vscode-icons:file-type-light-next" class="w-16 px-2" />
-        <Icon name="vscode-icons:file-type-astro" class="w-16 px-2" />
         <Icon name="vscode-icons:file-type-reactjs" class="w-16 px-2" />
         <Icon name="vscode-icons:file-type-node" class="w-16 px-2" />
         <Icon
