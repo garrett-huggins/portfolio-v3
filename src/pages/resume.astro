@@ -1,6 +1,7 @@
 ---
 import Layout from "@/layouts/layout.astro";
 import Card from "@/components/ui/card.astro";
+import Button from "@/components/ui/button.astro";
 ---
 
 <Layout title="resume | slanted.dev" pageDesc="Garrett Huggins Resume">
@@ -12,4 +13,9 @@ import Card from "@/components/ui/card.astro";
     </h2>
     <p>Coming soon...</p>
   </Card>
+  <div class="mt-2">
+    <Button className="w-full" href="/files/Garrett_Huggins_Resume.pdf">
+      Download Resume
+    </Button>
+  </div>
 </Layout>
