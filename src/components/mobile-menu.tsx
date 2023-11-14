@@ -57,6 +57,10 @@ const MenuButton = ({ path }: { path: string }) => {
 
   const collectionSections = [
     {
+      name: "Home",
+      href: "/",
+    },
+    {
       name: "Libraries",
       href: "/collections/libraries",
     },
