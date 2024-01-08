@@ -10,7 +10,11 @@ const { href, className, target } = Astro.props;
 
 {
   href ? (
-    <a href={href} target={target ? target : "_blank"}>
+    <a
+      href={href}
+      class="inline-block w-full"
+      target={target ? target : "_blank"}
+    >
       <button
         class={cn(
           "rounded-lg border-2 border-accent bg-primary p-2 hover:bg-accent hover:transition-colors hover:duration-300  hover:ease-in-out dark:border-d-accent dark:bg-d-primary hover:dark:bg-d-accent",
